@@ -85,3 +85,7 @@ print("Predicted Gender:", "Male" if result[0] == 1 else "Female")
 - Mennatallah Mostafa 245359
 - Sara Mohamed 245341
 - Ahmed Mohamed 245318
+
+## Deployment
+
+The project is deployed using Railway. Access the live application at: https://gender-detection-ml-model-production.up.railway.app/
