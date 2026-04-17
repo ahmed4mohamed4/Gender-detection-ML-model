@@ -33,9 +33,9 @@ def home ():
         # Make a prediction
         predict_gender = model.predict ([[height, weight, age]]) [0]
         if predict_gender == 0:
-            prediction = "Female 👧"
+            prediction = "ست الكل 👧"
         else:
-            prediction = "Male 👦"
+            prediction = "عم الناس 👦"
 
         return render_template ('index.html', form=form, prediction= prediction)
     return render_template ('index.html', form=form)
