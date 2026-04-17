@@ -4,11 +4,14 @@ from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms import FloatField, SubmitField
 from wtforms.validators import DataRequired
+from flask_wtf import CSRFProtect
 import os
 import pickle
 
 app = Flask (__name__)
-app.config ['SECRET_KEY'] = os.environ.get ('SECRET_KEY')
+app.config ['SECRET_KEY'] = os.environ.get ('SECRET_KEY', 'devkey')
+
+csrf = CSRFProtect (app)
 
 class Form (FlaskForm):
     height = FloatField ('Height', validators= [DataRequired ()])
