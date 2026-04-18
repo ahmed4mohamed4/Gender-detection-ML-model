@@ -35,7 +35,7 @@ def home ():
         if predict_gender == 0:
             prediction =  "Female 👧"
         else:
-            prediction = "👦"
+            prediction = "Male 👦"
 
         return render_template ('index.html', form=form, prediction= prediction)
     return render_template ('index.html', form=form)
